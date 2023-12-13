@@ -18,7 +18,8 @@ $price = ["hardcover" => 20, "paperback" => 10, "ebook" => 5];
 if (isset($price[$format])) {
     $total_price = $price[$format];
     
-    $sql = "INSERT INTO Orders (customer_name, customer_address, book_format) VALUES ('$name', '$address', '$format')";
+    $sql = "INSERT INTO Orders (customer_name, customer_address, book_format) 
+			VALUES ('$name', '$address', '$format')";
     
     if (mysqli_query($conn, $sql)) {
         echo "Order successfully created.<br>";
